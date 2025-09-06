@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './style.css'; 
+import './Events.css'; 
 const EventCard = ({ title, image }) => {
   return (
     <div className="card rounded-3xl overflow-hidden shadow-xl flex flex-col items-center justify-center p-6 text-center bg-slate-800/40 border border-blue-500/50 backdrop-blur-md transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_10px_15px_rgba(59,130,246,0.2),_0_4px_6px_rgba(59,130,246,0.1)]">
