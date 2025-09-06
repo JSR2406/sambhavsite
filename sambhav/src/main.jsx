@@ -4,27 +4,38 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 
 // Import components
-import Layout from './App.jsx';  // Layout wrapper with <Outlet />
 import LandingPage from './components/LANDING_PAGE/LandingPage.jsx';
-import About from './components/ABOUT/About.jsx';
+import About from './components/ABOUT/About app/About.jsx';
+import Events from './components/EVENTS/Events.jsx';
+import Events_detail from './components/EVENTS DETAIL/Details/Details.jsx';
+import LeaderBoard from './components/LEADERBOARD/leaderboard section/LeaderBoard.jsx';
+import Faq from './components/LEADERBOARD/leaderboard section/LeaderBoard.jsx';
 import Contact from './components/CONTACT/Contact.jsx';
-import LeaderBoard from './components/LEADERBOARD/LeaderBoard.jsx';
-import Faq from './components/FAQ/Faq.jsx';
 
 // Define routes
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
-    children: [
-      { path: '', element: <LandingPage /> },
-      { path: 'about', element: <About /> },
-      { path: 'leaderboard', element: <LeaderBoard /> },
-      { path: 'faq', element: <Faq /> },
-      { path: 'contact', element: <Contact /> },
-    ],
+    element: <LandingPage />,  // set LandingPage as default
+  },
+  {
+    path: 'about',
+    element: <About />,
+  },
+  {
+    path: 'leaderboard',
+    element: <LeaderBoard />,
+  },
+  {
+    path: 'faq',
+    element: <Faq />,
+  },
+  {
+    path: 'contact',
+    element: <Contact />,
   },
 ]);
+
 
 // Render app
 createRoot(document.getElementById('root')).render(
