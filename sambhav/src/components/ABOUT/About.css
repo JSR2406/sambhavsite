@@ -1,0 +1,131 @@
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+/* Title */
+.about-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff6600; /* Accent color */
+}
+
+.sambhav {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: #00bcd4; /* Cyan accent */
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  flex: 1 1 45%;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.cyan {
+  color: #00bcd4;
+}
+
+.orange {
+  color: #ff6600;
+}
+
+/* Inspiration Section */
+.inspo {
+  margin-top: 60px;
+}
+
+.heading {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #ffcc00;
+}
+
+.inspo-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.inspo-left {
+  text-align: center;
+}
+
+.inspo-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.inspo-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.inspo-divider {
+  width: 2px;
+  background: #fff;
+  height: 120px;
+}
+
+.inspo-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.inspo-quote {
+  font-style: italic;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .inspo-inner {
+    flex-direction: column;
+  }
+
+  .inspo-divider {
+    display: none;
+  }
+
+  .inspo-text {
+    text-align: center;
+  }
+}

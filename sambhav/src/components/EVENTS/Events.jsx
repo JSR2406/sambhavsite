@@ -23,27 +23,6 @@ const EventCard = ({ title, image }) => {
   );
 };
 
-const Navbar = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  return (
-    <nav className="fixed top-0 w-full p-4 md:p-0 h-[75px] flex justify-between items-center bg-slate-900/70 backdrop-blur-sm z-1000">
-      <div className="nav-logo p-2">
-        <img src="/Assests/logo.png" alt="Sambhav Logo" className="h-[200px] w-[200px] object-contain" />
-      </div>
-      <ul className={`nav-links flex gap-10 md:gap-16 list-none mr-5 md:mr-10 ${mobileMenuOpen ? 'block' : 'hidden md:flex'} absolute md:static top-[75px] left-0 w-full md:w-auto bg-slate-900/90 md:bg-transparent flex-col md:flex-row items-center justify-center`}>
-        <li><a href="#home" className="text-blue-500 hover:text-orange-500 transition-colors duration-300 font-bold text-lg">HOME</a></li>
-        <li><a href="#about" className="text-orange-500 hover:text-blue-500 transition-colors duration-300 font-bold text-lg">ABOUT</a></li>
-        <li><a href="#events" className="text-blue-500 hover:text-orange-500 transition-colors duration-300 font-bold text-lg">EVENTS</a></li>
-        <li><a href="#leaderboard" className="text-orange-500 hover:text-blue-500 transition-colors duration-300 font-bold text-lg">LEADERBOARD</a></li>
-        <li><a href="#contact" className="text-blue-500 hover:text-orange-500 transition-colors duration-300 font-bold text-lg">CONTACT</a></li>
-      </ul>
-      <div className="menu-toggle md:hidden cursor-pointer p-4 text-3xl text-blue-500 z-1100" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-        ☰
-      </div>
-    </nav>
-  );
-};
 
 const HeroSection = () => {
   return (
