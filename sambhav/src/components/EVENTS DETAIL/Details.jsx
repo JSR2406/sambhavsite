@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./EventPage.css";
+import "./Details.css";
 
 export default function EventPage() {
   const [menuOpen, setMenuOpen] = useState(false);

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./App.css"; // move CSS here for cleaner JSX
+import "./landingpage.css"; // move CSS here for cleaner JSX
 
 export default function App() {
   const videoRef = useRef(null);

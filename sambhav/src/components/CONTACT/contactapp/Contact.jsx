@@ -1,5 +1,5 @@
 import React from "react";
-import "./contact.css"; // keep your existing styles
+import "./Contact.css"; // keep your existing styles
 
 function ContactPage() {
   return (
