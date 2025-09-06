@@ -1,0 +1,245 @@
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at center, #0d1b2a, #000814);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.event-page {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 50px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-logo img {
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.nav-blue {
+  color: #00aaff;
+}
+
+.nav-orange {
+  color: #ff8800;
+}
+
+.nav-links li a:hover {
+  color: #fff;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ===== Icons Floating ===== */
+.icon {
+  position: absolute;
+  opacity: 0.8;
+  width: 60px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.icon.orange {
+  filter: drop-shadow(0 0 8px #ff8800);
+}
+
+.icon.blue {
+  filter: drop-shadow(0 0 8px #00aaff);
+}
+
+/* Position each icon uniquely */
+.brain_orange { top: 120px; left: 5%; }
+.brain_blue { top: 250px; right: 10%; }
+.rocket { top: 80px; right: 20%; }
+.gear_orange { bottom: 80px; left: 15%; }
+.gear_blue { bottom: 100px; right: 25%; }
+.robotic_arm { top: 150px; left: 70%; }
+.ring { bottom: 50px; left: 50%; }
+.open_bracket { top: 320px; left: 8%; }
+.closed_bracket { top: 400px; right: 8%; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+
+/* ===== Layout ===== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 50px 80px;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 40px;
+}
+
+/* Left panel (Poster) */
+.left-panel img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/* Right panel (Details) */
+.right-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.block {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+.block h2 {
+  margin-bottom: 10px;
+  color: #00aaff;
+  font-size: 22px;
+}
+
+.block p,
+.block ul {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ddd;
+}
+
+.block ul li {
+  margin-left: 18px;
+  margin-bottom: 5px;
+}
+
+/* Info Row */
+.info-row {
+  display: flex;
+  gap: 20px;
+}
+
+.info-block {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.info-block h3 {
+  margin-bottom: 8px;
+  color: #ff8800;
+}
+
+/* Register Button */
+.btn {
+  display: flex;
+  justify-content: center;
+}
+
+.register-btn {
+  background: linear-gradient(45deg, #00aaff, #ff8800);
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.register-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .container-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .container {
+    padding: 30px 20px;
+  }
+
+  .left-panel {
+    display: flex;
+    justify-content: center;
+  }
+
+  .left-panel img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    flex-direction: column;
+    background: rgba(0,0,0,0.9);
+    width: 200px;
+    height: 0;
+    overflow: hidden;
+    gap: 20px;
+    padding: 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  .nav-links.active {
+    height: auto;
+    padding: 20px;
+  }
+}
